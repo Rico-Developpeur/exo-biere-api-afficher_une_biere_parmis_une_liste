@@ -10,6 +10,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* route à segment dynamique */}
           <Route path="/:beerId" element={<BiereDetail />} />
         </Routes>
       </div>

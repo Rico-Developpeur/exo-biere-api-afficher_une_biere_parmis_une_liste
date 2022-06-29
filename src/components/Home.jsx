@@ -7,6 +7,8 @@ function Home() {
   const [bieres, setBiere] = useState([]);
 
   //Appel API de toute la liste des bieres
+  //Ne pas oublier le useEffect avec un tableau vide à la fin
+  //sinon ça donne une boucle à l'infini.
   useEffect(() => {
     axios
       .get("https://api.punkapi.com/v2/beers")

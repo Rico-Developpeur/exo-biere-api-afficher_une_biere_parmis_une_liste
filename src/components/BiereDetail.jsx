@@ -12,7 +12,6 @@ const BiereDetail = () => {
   const { beerId } = useParams();
 
   useEffect(() => {
-    //   function OneBiere() {
     axios
       //ne pas oublier de mettre le params afin d'avoir que la bierre que l'on veut afficher
       .get(`https://api.punkapi.com/v2/beers/${beerId}`)
