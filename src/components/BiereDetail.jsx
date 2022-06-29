@@ -25,11 +25,17 @@ const BiereDetail = () => {
   //j'affiche les infos de la biere que j'ai choisi.
   return (
     <div>
-      <h2>{bibine.name}</h2>
-      <img src={bibine.image_url} alt="biere" />
-      <p>{bibine.description}</p>
-      {/* je reviens sur la page avec toutes les bieres */}
-      <Link to="/">Toutes les bieres</Link>
+      {/* rendu conditionnel lors d'un appel a l'API;
+        pour afficher les resulats une fois arrivé. */}
+      {bibine && bibine.name && (
+        <>
+          <h2>{bibine.name}</h2>
+          <img src={bibine.image_url} alt="biere" />
+          <p>{bibine.description}</p>
+          {/* je reviens sur la page avec toutes les bieres */}
+          <Link to="/">Toutes les bieres</Link>
+        </>
+      )}
     </div>
   );
 };
